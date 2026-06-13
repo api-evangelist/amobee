@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.amobee.com/",
+  "name": "Amobee",
+  "alternateName": "Nexxen",
+  "description": "Amobee (now Nexxen) is a digital advertising platform offering REST APIs for managing cross-channel programmatic campaigns, audience targeting, data management, and advertising analytics. The platform enables advertisers and agencies to plan, activate, and measure media across display, video, mobile, social, and TV channels through a unified DSP.",
+  "url": "https://www.amobee.com/",
+  "sameAs": [
+    "https://www.nexxen.com/"
+  ],
+  "logo": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://www.amobee.com/",
+    "contactType": "customer support"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Amobee API Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Amobee Campaign API",
+        "description": "REST API for managing cross-channel advertising campaigns including advertisers, insertion orders, line items, packages, creatives, and ads across programmatic channels.",
+        "url": "https://services.amobee.com/campaign/v3/doc/",
+        "category": "Digital Advertising API"
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Digital Advertising",
+    "Programmatic Advertising",
+    "Demand-Side Platform",
+    "Campaign Management",
+    "Audience Targeting",
+    "Data Management Platform",
+    "Connected TV Advertising",
+    "Ad Tech"
+  ],
+  "termsOfService": "https://www.amobee.com/trust/master-service-terms/",
+  "privacyPolicy": "https://www.amobee.com/trust/privacy-policy/"
+}

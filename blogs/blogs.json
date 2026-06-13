@@ -1,0 +1,69 @@
+{
+  "aid": "amobee",
+  "name": "Amobee Blog",
+  "description": "Blog content from Amobee, now rebranded as Nexxen, covering digital advertising, programmatic campaigns, CTV, and ad tech topics.",
+  "url": "https://www.nexxen.com/blog/",
+  "modified": "2026-06-13",
+  "posts": [
+    {
+      "title": "Three Key Shifts Opening New Paths to World Cup Audiences",
+      "url": "https://nexxen.com/three-key-shifts-opening-new-paths-to-world-cup-audiences/",
+      "date": "2026-06-01",
+      "tags": ["CTV", "Audience Targeting", "Sports"]
+    },
+    {
+      "title": "Nexxen and TargetSmart Break Down the Evolution of Political Advertising in a Programmatic World",
+      "url": "https://nexxen.com/nexxen-and-targetsmart-break-down-the-evolution-of-political-advertising-in-a-programmatic-world/",
+      "date": "2026-06-01",
+      "tags": ["Programmatic", "Political Advertising"]
+    },
+    {
+      "title": "Life at Nexxen with Adam Mugridge",
+      "url": "https://nexxen.com/life-at-nexxen-with-adam-mugridge/",
+      "date": "2026-06-01",
+      "tags": ["Company Culture"]
+    },
+    {
+      "title": "Transforming the Smart TV Home Screen Into Measurable Outcomes",
+      "url": "https://nexxen.com/transforming-the-smart-tv-home-screen-into-measurable-outcomes/",
+      "date": "2026-05-01",
+      "tags": ["CTV", "Measurement", "Smart TV"]
+    },
+    {
+      "title": "Unlocking Smarter CTV Activation: Nexxen Brings ACR Data to Google Display & Video",
+      "url": "https://nexxen.com/nexxen-brings-acr-data-to-google-display-video/",
+      "date": "2026-04-01",
+      "tags": ["CTV", "ACR Data", "Google", "Programmatic"]
+    },
+    {
+      "title": "Building an Artifacts System for Our LLM Data Agents",
+      "url": "https://nexxen.com/building-an-artifacts-system-for-our-llm-data-agents/",
+      "date": "2026-03-01",
+      "tags": ["LLM", "Data", "Engineering", "AI"]
+    },
+    {
+      "title": "From Acquisition Fragmentation to Atlas: Building Unified Observability at Scale",
+      "url": "https://nexxen.com/project-atlas/",
+      "date": "2026-03-01",
+      "tags": ["Engineering", "Observability", "Infrastructure"]
+    },
+    {
+      "title": "Inclusion Lists Reduce Buyer Exposure to MFA Before Impressions are Served",
+      "url": "https://nexxen.com/inclusion-lists-reduce-mfa-exposure/",
+      "date": "2026-02-01",
+      "tags": ["Brand Safety", "MFA", "Programmatic"]
+    },
+    {
+      "title": "The Most Underrated Ad Placement in TV Is Hiding in Plain Sight",
+      "url": "https://nexxen.com/the-most-underrated-ad-placement-in-tv-is-hiding-in-plain-sight/",
+      "date": "2026-01-01",
+      "tags": ["CTV", "TV Advertising", "Ad Placement"]
+    },
+    {
+      "title": "Life at Nexxen with Yair Shilo",
+      "url": "https://nexxen.com/life-at-nexxen-with-yair-shilo/",
+      "date": "2025-12-01",
+      "tags": ["Company Culture"]
+    }
+  ]
+}
