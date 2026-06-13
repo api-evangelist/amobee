@@ -1,0 +1,40 @@
+finops:
+  summary: Amobee uses a custom enterprise pricing model with no public rate card. Costs are structured around technology fees, managed service fees, and analytics fees as defined in each client's Master Service Agreement. There is no self-serve signup or public pricing page.
+
+  pricing_model: custom_enterprise
+  pricing_transparency: low
+  public_pricing_page: false
+
+  fee_types:
+    - name: Technology Fee
+      description: A percentage-based fee applied to media spend processed through the Amobee DSP platform. The specific percentage is negotiated per client contract and not publicly disclosed.
+      basis: percent_of_media_spend
+      public: false
+
+    - name: Managed Service Fee
+      description: Applied when Amobee's team manages campaign operations on behalf of the client. Covers campaign strategy, execution, and optimization services.
+      basis: negotiated
+      public: false
+
+    - name: Analytics Fee
+      description: Fee for access to advanced analytics, Brand Intelligence, and DataMine reporting capabilities beyond standard campaign reporting.
+      basis: negotiated
+      public: false
+
+    - name: Data Fee
+      description: Additional fees may apply for use of third-party audience data segments accessed through the Amobee DMP or third-party data marketplaces.
+      basis: per_cpm_or_negotiated
+      public: false
+
+  cost_controls:
+    - type: Campaign Budget
+      description: Campaigns have configurable total budgets and daily budget caps set at the insertion order and line item level via the Campaign API or UI.
+
+    - type: Bid Controls
+      description: The DSP provides bid controls at the line item level including max bid price, bid shading, and automated optimization settings.
+
+    - type: Spend Pacing
+      description: Platform supports even and accelerated pacing options to control how budgets are distributed across flight dates.
+
+  contact_for_pricing: https://www.amobee.com/
+  terms: https://www.amobee.com/trust/master-service-terms/

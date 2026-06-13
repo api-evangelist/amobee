@@ -1,0 +1,32 @@
+plans:
+  - name: Managed Service
+    description: Full-service campaign management where Amobee's team plans, executes, and optimizes campaigns on behalf of the client. Includes access to the Platform API with an API-only account provisioned by Amobee. Pricing is custom based on managed spend, technology fees, and analytics fees as defined in the Master Service Agreement.
+    type: managed
+    rate_limits:
+      - type: requests
+        description: API clients must not unreasonably burden the API with ad call volume and must honor Amobee's requests to limit request volume.
+    features:
+      - Cross-channel campaign management (display, video, mobile, social, TV)
+      - Audience targeting and retargeting
+      - Data Management Platform (DMP) access
+      - Brand Intelligence and analytics
+      - Real-time bid optimization across 2,500+ variables
+      - Location-based targeting
+      - Platform API access (API-only account)
+      - Reporting and analytics
+    contact: https://www.amobee.com/
+
+  - name: Self-Service DSP
+    description: Programmatic self-service access to the Amobee Demand Side Platform. Clients manage their own campaigns via the UI and optionally via Platform API. Technology fees apply as a percentage of media spend. Specific pricing requires direct engagement with Amobee sales.
+    type: self-service
+    rate_limits:
+      - type: requests
+        description: Volume limits apply; clients must not overburden the API and must comply with social publisher API rate limits imposed on Amobee.
+    features:
+      - Programmatic media buying across exchanges
+      - Campaign, insertion order, line item, and creative management
+      - Audience segment targeting
+      - Platform API access
+      - Reporting and analytics
+      - Brand safety controls
+    contact: https://www.amobee.com/
