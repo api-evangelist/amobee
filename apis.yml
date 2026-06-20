@@ -1,7 +1,7 @@
 aid: amobee
 name: Amobee
 description: Amobee (now Nexxen) is a digital advertising platform offering REST APIs for managing cross-channel programmatic campaigns, audience targeting, data management, and advertising analytics. The platform enables advertisers and agencies to plan, activate, and measure media across display, video, mobile, social, and TV channels through a unified DSP.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/apis.yml
 created: "2026-06-13"
 modified: "2026-06-13"
@@ -19,7 +19,7 @@ apis:
   - aid: amobee:amobee-campaign-api
     name: Amobee Campaign API
     description: REST API for managing cross-channel advertising campaigns including advertisers, insertion orders, line items, packages, creatives, and ads across programmatic channels. Authentication uses OAuth2 client credentials flow against the Amobee accounts service.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.amobee.com/
     baseURL: https://services.amobee.com/campaign/v3/api
     tags:
