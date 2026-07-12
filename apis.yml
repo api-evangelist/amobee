@@ -47,6 +47,10 @@ apis:
         url: https://www.amobee.com/
         email: ""
 common:
+  - type: VulnerabilityDisclosure
+    url: security/amobee-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amobee-domain-security.yml
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
   - type: RateLimits
