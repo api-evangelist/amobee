@@ -1,0 +1,67 @@
+generated: '2026-08-12'
+method: probed
+source: >-
+  live probes of https://services.amobee.com/accounts/v1/api/token plus the Amobee
+  Master Service Terms Schedule A (API Usage) at
+  https://www.amobee.com/trust/master-service-terms/schedule-a/
+note: >-
+  Derived from what the live endpoint actually answers, not from a spec — the
+  Amobee Platform API reference (services.amobee.com/campaign/v3/doc/) now returns
+  404 and the help center is customer-gated, so no securitySchemes block was
+  available to derive from.
+schemes:
+  - id: oauth2_client_credentials
+    type: oauth2
+    flow: clientCredentials
+    token_endpoint: https://services.amobee.com/accounts/v1/api/token
+    client_authentication: http_basic
+    evidence:
+      - probe: GET https://services.amobee.com/accounts/v1/api/token
+        status: 405
+        detail: 'Allow: POST — the endpoint is live and POST-only'
+        observed: '2026-08-12'
+      - probe: POST https://services.amobee.com/accounts/v1/api/token with grant_type=client_credentials and no credentials
+        status: 400
+        detail: >-
+          {"access_token":null,"token_type":null,"expires_in":null,"error":"invalid_request",
+          "error_description":"Unable to parse authorization basic token."} — the server expects the
+          client_id/client_secret pair in an HTTP Basic Authorization header
+        observed: '2026-08-12'
+    token_use: >-
+      The issued access_token is presented as a Bearer token in the Authorization
+      header on Amobee Platform API (campaign/v3) requests.
+    credential_issuance: >-
+      Credentials are not self-service. Schedule A of the Master Service Terms
+      states the API Client "will use the API through an API-only account created
+      by Amobee" — an account is provisioned by Amobee under a signed agreement.
+    scopes_documented: false
+    scopes_note: >-
+      No public scope reference is published. Do not confuse the Okta org scopes
+      exposed at amobee-platform.okta.com/.well-known/openid-configuration with
+      Amobee API scopes — those govern the Okta tenant, not the Platform API.
+console_sso:
+  provider: Okta
+  tenant: https://amobee-platform.okta.com
+  preview_tenant: https://amobee-platform.oktapreview.com
+  console: https://platform.amobee.com/app/account/index.htm
+  discovered_via: Content-Security-Policy header on https://services.amobee.com/accounts/v1/api/token
+  evidence:
+    - url: https://amobee-platform.okta.com/.well-known/openid-configuration
+      status: 200
+    - url: https://platform.amobee.com/
+      status: 200
+  note: >-
+    Human operators sign in to the Amobee DSP console through an Okta-hosted SSO.
+    This is the UI login path, distinct from the machine-to-machine
+    client_credentials flow used by API clients.
+transport:
+  tls: required
+  hsts_observed: 'strict-transport-security: max-age=15724800; includeSubDomains'
+  hsts_source: response headers from https://services.amobee.com/accounts/v1/api/token
+docs:
+  reference: null
+  reference_note: >-
+    https://services.amobee.com/campaign/v3/doc/ (the URL apis.yml has carried as
+    the API documentation) returned HTTP 404 on 2026-08-12. help.amobee.com
+    returns 403 to anonymous requests and its Help Center API returns 401, so the
+    authentication guide is customer-only.

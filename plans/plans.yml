@@ -1,3 +1,17 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.amobee.com/trust/master-service-terms/schedule-a/
+plan_count: 2
+pricing_published: false
+note: >-
+  Amobee publishes no pricing page and no numbers. The two engagement models below
+  are the ones named in Schedule A of the Master Service Terms (Demand Side
+  Platform), which distinguishes managed-service from self-service and defines the
+  fee structure (Cost of Goods Sold, Inventory Cost, DSP Fees comprising a
+  technology fee, a managed service fee and an optional analytics fee, subject to a
+  $0.00005 per-impression minimum) — but every actual rate lives on a per-client
+  Pricing Sheet negotiated with Amobee. Verified 2026-08-12; the terms page now
+  redirects to nexxen.com.
 plans:
   - name: Managed Service
     description: Full-service campaign management where Amobee's team plans, executes, and optimizes campaigns on behalf of the client. Includes access to the Platform API with an API-only account provisioned by Amobee. Pricing is custom based on managed spend, technology fees, and analytics fees as defined in the Master Service Agreement.

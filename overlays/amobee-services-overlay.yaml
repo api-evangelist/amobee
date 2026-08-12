@@ -1,0 +1,77 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Amobee services gateway OpenAPI
+  version: 1.0.0
+x-provenance:
+  generated: '2026-08-12'
+  method: generated
+  source: openapi/amobee-services-openapi.json
+  note: >-
+    Extends the verbatim OpenAPI served at https://services.amobee.com/v3/api-docs.
+    The upstream document is springdoc's default output — untitled ("OpenAPI
+    definition", version v0), untagged, and with no operationIds — so this overlay
+    supplies identity and taxonomy only. It adds no endpoint, parameter, schema or
+    behavior that the served document does not already declare, and it does not
+    touch the original file.
+extends: openapi/amobee-services-openapi.json
+actions:
+  - target: $.info
+    update:
+      title: Amobee Services Gateway API
+      description: >-
+        Public utility endpoints served by the Amobee services gateway at
+        services.amobee.com — IAB TCF vendor device-storage disclosure, request
+        echo, and health check. This is NOT the Amobee Platform (Campaign) API,
+        whose documentation at services.amobee.com/campaign/v3/doc/ returned 404
+        when probed on 2026-08-12 and whose reference is customer-gated.
+      x-api-evangelist-note: >-
+        Title and description supplied by API Evangelist; the served document is
+        springdoc's untitled default.
+  - target: $.paths['/files/TCFDisclosure.json'].get
+    update:
+      operationId: getTcfDisclosureJson
+      summary: Get the IAB TCF vendor device-storage disclosure (JSON extension)
+      tags:
+        - Consent
+  - target: $.paths['/files/TCFDisclosure'].get
+    update:
+      operationId: getTcfDisclosure
+      summary: Get the IAB TCF vendor device-storage disclosure
+      tags:
+        - Consent
+  - target: $.paths['/ip'].get
+    update:
+      operationId: getRequestIp
+      summary: Echo the resolved client IP and the forwarding headers the gateway attached
+      tags:
+        - Diagnostics
+  - target: $.paths['/healthcheck/status'].get
+    update:
+      operationId: getHealthcheckStatus
+      summary: Gateway health check (returns the string "healthy")
+      tags:
+        - Diagnostics
+  - target: $.paths['/env-vars-test'].get
+    update:
+      operationId: getEnvVarsTest
+      summary: Environment variable diagnostic endpoint
+      tags:
+        - Diagnostics
+      x-api-evangelist-note: >-
+        Declared by the served document. Left as-is; not exercised during
+        profiling.
+  - target: $.paths['/swagger-resources'].get
+    update:
+      operationId: getSwaggerResources
+      summary: Legacy springfox swagger-resources discovery endpoint
+      tags:
+        - Diagnostics
+      x-api-evangelist-note: >-
+        Observed returning HTTP 500 on 2026-08-12 — declared but not functioning.
+  - target: $.paths['/swagger-config'].get
+    update:
+      operationId: getSwaggerConfig
+      summary: Legacy springfox swagger-config discovery endpoint
+      tags:
+        - Diagnostics
+      x-api-evangelist-note: Observed returning an empty body on 2026-08-12.

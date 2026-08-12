@@ -1,0 +1,91 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://services.amobee.com/files/TCFDisclosure.json,
+  https://services.amobee.com/v3/api-docs,
+  https://www.amobee.com/gdpr/status/, https://www.amobee.com/ccpa/status/,
+  https://www.amobee.com/trust/master-service-terms/schedule-e/ and schedule-g/,
+  and live probes of https://services.amobee.com/accounts/v1/api/token
+note: >-
+  Only standards with observable evidence are marked conforms:true. Amobee
+  publishes no certification list (no SOC 2 / ISO 27001 report page was found),
+  so those are recorded as unknown rather than assumed.
+standards:
+  - id: iab-tcf-v2
+    name: IAB Europe Transparency & Consent Framework — Vendor Device Storage Disclosure
+    conforms: true
+    evidence:
+      - url: https://services.amobee.com/files/TCFDisclosure.json
+        status: 200
+        detail: >-
+          Serves the TCF device-storage disclosure JSON (disclosures[], domains[],
+          sdks[]) declaring a `uid` cookie with a 15552000s max age on *.turn.com
+          for purposes 1,2,3,4,7,9,10. The endpoint is also a declared operation in
+          the live OpenAPI at /v3/api-docs.
+  - id: oauth2-client-credentials
+    name: OAuth 2.0 Client Credentials grant (RFC 6749)
+    conforms: true
+    evidence:
+      - url: https://services.amobee.com/accounts/v1/api/token
+        status: 400
+        detail: >-
+          Accepts POST grant_type=client_credentials with HTTP Basic client
+          authentication and returns the RFC 6749 error shape
+          (error / error_description).
+  - id: openapi-3
+    name: OpenAPI 3.1.0
+    conforms: true
+    evidence:
+      - url: https://services.amobee.com/v3/api-docs
+        status: 200
+        detail: >-
+          Valid OpenAPI 3.1.0 document (springdoc-generated) covering the services
+          gateway utility endpoints. It does NOT cover the Amobee Platform
+          (campaign/v3) API.
+  - id: rfc9116-security-txt
+    name: RFC 9116 security.txt
+    conforms: partial
+    evidence:
+      - url: https://www.amobee.com/.well-known/security.txt
+        status: 200
+        detail: >-
+          Well-formed with Contact, Expires, Preferred-Languages, Canonical and
+          Hiring — but the Expires value is 2023-12-31, so the file is stale, and
+          the Hiring URL now 404s.
+  - id: gdpr
+    name: EU General Data Protection Regulation
+    conforms: true
+    evidence:
+      - url: https://www.amobee.com/gdpr/status/
+        status: 200
+      - url: https://www.amobee.com/trust/master-service-terms/schedule-e/
+        status: 200
+        detail: Schedule E of the Master Service Terms is the GDPR schedule; a data-subject request path is published at /gdpr/request/.
+  - id: ccpa
+    name: California Consumer Privacy Act
+    conforms: true
+    evidence:
+      - url: https://www.amobee.com/ccpa/status/
+        status: 200
+      - url: https://www.amobee.com/trust/master-service-terms/schedule-g/
+        status: 200
+        detail: Schedule G is the CCPA schedule; a consumer request path is published at /ccpa/request/ and an opt-out at /trust/consumer-opt-out/.
+  - id: rfc9457
+    name: RFC 9457 Problem Details for HTTP APIs
+    conforms: false
+    evidence:
+      - url: https://services.amobee.com/campaign/v3/doc/
+        status: 404
+        detail: >-
+          Errors use a proprietary {timestamp,path,status,error,requestId} envelope
+          with content-type application/json, not application/problem+json.
+  - id: soc2
+    name: SOC 2
+    conforms: unknown
+    evidence:
+      - detail: No trust center or certification page was found on any amobee.com host; probe-security-programs.py found no trust center.
+  - id: iso-27001
+    name: ISO/IEC 27001
+    conforms: unknown
+    evidence:
+      - detail: No published certification page found.

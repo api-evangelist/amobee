@@ -1,0 +1,5 @@
+Contact: mailto:infosec@amobee.com
+Expires: 2023-12-31T20:59:00.000Z
+Preferred-Languages: en
+Canonical: https://www.amobee.com/.well-known/security.txt
+Hiring: https://www.amobee.com/company/careers/

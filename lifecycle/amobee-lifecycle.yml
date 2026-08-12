@@ -1,0 +1,89 @@
+generated: '2026-08-12'
+method: probed
+source: >-
+  live probes of amobee.com, services.amobee.com, platform.amobee.com,
+  help.amobee.com and status.amobee.com on 2026-08-12
+summary: >-
+  Amobee is no longer an operating brand. www.amobee.com now serves a holding page
+  titled "Amobee is now Nexxen!" pointing at nexxen.com (Amobee was acquired by
+  Tremor International in 2022; Tremor rebranded to Nexxen in 2023). The platform
+  itself is still running for existing customers — the services gateway, the OAuth
+  token endpoint and the DSP console all answer — but the public developer surface
+  has been withdrawn.
+brand:
+  status: absorbed
+  successor: Nexxen
+  successor_url: https://nexxen.com/
+  evidence:
+    - url: https://www.amobee.com/
+      status: 200
+      detail: '<title>Amobee is now Nexxen!</title>; meta description "Amobee is now Nexxen! Visit nexxen.com to learn more."'
+    - url: https://www.amobee.com/trust/master-service-terms/
+      status: 200
+      detail: redirects to https://nexxen.com/master-service-terms/
+  note: >-
+    The residual amobee.com site is a WordPress trust/legal shell (privacy policy,
+    the Master Service Terms schedules, GDPR/CCPA pages). Its page sitemap was last
+    modified 2025-09-12; the post sitemap has not changed since 2023-03-09.
+versioning:
+  policy_published: false
+  scheme: major version in the path (/campaign/v3/api, /accounts/v1/api)
+deprecation:
+  policy_published: false
+  sunset_header: not observed
+  note: >-
+    No deprecation or sunset policy is published, and no RFC 8594 Deprecation or
+    Sunset headers were returned on any probed response. No Deprecation pointer is
+    emitted — the withdrawal of the docs is an observed fact, not a published
+    policy.
+withdrawn_surfaces:
+  - url: https://services.amobee.com/campaign/v3/doc/
+    was: Amobee Platform (Campaign) API documentation, the URL carried in apis.yml
+    status: 404
+    checked: '2026-08-12'
+  - url: https://login.amobee.com/
+    was: platform login
+    status: 404
+    checked: '2026-08-12'
+  - url: https://www.amobee.com/blog/
+    was: company blog
+    status: 404
+    checked: '2026-08-12'
+  - url: https://www.amobee.com/company/careers/
+    was: careers page cited by the Hiring field of the live security.txt
+    status: 404
+    checked: '2026-08-12'
+live_surfaces:
+  - url: https://services.amobee.com/healthcheck/status
+    status: 200
+    detail: 'body: healthy'
+  - url: https://services.amobee.com/accounts/v1/api/token
+    status: 405
+    detail: 'Allow: POST — OAuth2 token endpoint still serving'
+  - url: https://services.amobee.com/v3/api-docs
+    status: 200
+    detail: OpenAPI 3.1.0 for the services gateway utility endpoints
+  - url: https://services.amobee.com/files/TCFDisclosure.json
+    status: 200
+    detail: IAB TCF vendor device-storage disclosure
+  - url: https://platform.amobee.com/app/account/index.htm
+    status: 200
+    detail: DSP console sign-in (Okta SSO)
+status_page:
+  published: false
+  probed:
+    - url: https://status.amobee.com/
+      status: 503
+      detail: host resolves and holds a certificate but the status page itself is unavailable
+  note: No usable status page — no StatusPage pointer is emitted.
+sla:
+  published: true
+  url: https://www.amobee.com/trust/master-service-terms/schedule-d/
+  detail: Schedule D of the Master Service Terms is the Service Level Agreement.
+support:
+  help_center: https://help.amobee.com/hc/en-us
+  help_center_status: 403
+  help_center_note: >-
+    Zendesk help center refuses anonymous requests (403) and its Help Center API
+    returns 401 — the API reference is customer-only. No Support pointer is
+    emitted because the page is not publicly reachable.

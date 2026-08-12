@@ -1,0 +1,88 @@
+generated: '2026-08-12'
+method: probed
+source: >-
+  live responses from https://services.amobee.com (404/405/400 envelopes and
+  response headers), the OpenAPI served at https://services.amobee.com/v3/api-docs,
+  and the Master Service Terms Schedule A
+note: >-
+  Cross-cutting semantics observed on the live Amobee services gateway. The
+  Platform API reference is no longer public, so anything not observable from a
+  live unauthenticated response is recorded as "undocumented" rather than guessed.
+auth:
+  style: oauth2_client_credentials
+  header: 'Authorization: Bearer <access_token>'
+  token_endpoint: https://services.amobee.com/accounts/v1/api/token
+  client_auth: HTTP Basic (client_id:client_secret)
+  see: authentication/amobee-authentication.yml
+versioning:
+  style: path
+  pattern: /<service>/v<major>/api
+  examples:
+    - /campaign/v3/api
+    - /accounts/v1/api
+  note: >-
+    Major version is carried in the path segment per service. No version header,
+    no dated version scheme, and no published deprecation policy.
+  see: lifecycle/amobee-lifecycle.yml
+error_envelope:
+  format: proprietary JSON (not RFC 9457 / application/problem+json)
+  content_type: application/json
+  fields:
+    - name: timestamp
+      description: ISO 8601 timestamp of the failed request
+    - name: path
+      description: request path that failed
+    - name: status
+      description: numeric HTTP status, repeated in the body
+    - name: error
+      description: HTTP reason phrase (Not Found, Internal Server Error)
+    - name: requestId
+      description: gateway-assigned correlation id
+  example: '{"timestamp":"2026-08-12T16:48:19.345Z","path":"/","status":404,"error":"Not Found","requestId":"4de2f694-3498985"}'
+  oauth_variant:
+    note: >-
+      The token endpoint uses the OAuth 2.0 error shape instead, nulling the token
+      fields alongside it.
+    example: '{"access_token":null,"token_type":null,"expires_in":null,"error":"invalid_request","error_description":"Unable to parse authorization basic token."}'
+  see: errors/amobee-problem-types.yml
+request_tracing:
+  request_header: X-Request-ID
+  request_header_note: >-
+    Echoed back by https://services.amobee.com/ip, which reports the X-Request-ID,
+    X-Real-IP and X-Forwarded-* headers the gateway attached to the call.
+  response_header: x-amobee-cloud-gateway-transaction-id
+  body_field: requestId
+  gateway_marker: 'x-amobee-cloud-gateway: true'
+  observed: '2026-08-12'
+idempotency:
+  supported: unknown
+  evidence: none
+  note: >-
+    No Idempotency-Key header, retry-safety statement, or idempotent-replay
+    semantics is observable on any public Amobee surface, and the Platform API
+    reference is gated. NOT claimed — no Idempotency pointer is emitted.
+pagination:
+  style: undocumented
+  note: >-
+    The public /v3/api-docs surface exposes no collection endpoints, so no
+    pagination convention can be observed. The campaign/v3 collections
+    (advertisers, insertion orders, line items) are documented only inside the
+    customer-gated help center.
+rate_limit_signaling:
+  response_headers: none observed
+  note: >-
+    No X-RateLimit-* or RateLimit-* headers were returned on any probed response.
+    Amobee's limit is contractual rather than header-signaled — Schedule A requires
+    API clients not to "unreasonably burden the API" and to honor Amobee requests
+    to reduce volume.
+  see: rate-limits/rate-limits.yml
+security_headers:
+  observed:
+    - 'strict-transport-security: max-age=15724800; includeSubDomains'
+    - 'x-content-type-options: nosniff'
+    - 'x-frame-options: SAMEORIGIN'
+    - 'referrer-policy: strict-origin'
+    - 'content-security-policy: default-src ... amobee-platform.okta.com ...'
+    - 'permissions-policy: geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=()...'
+  source: response headers from https://services.amobee.com/accounts/v1/api/token
+  observed_on: '2026-08-12'

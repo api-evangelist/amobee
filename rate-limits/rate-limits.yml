@@ -1,3 +1,13 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.amobee.com/trust/master-service-terms/schedule-a/
+limit_count: 0
+headers_observed: []
+headers_note: >-
+  No X-RateLimit-*, RateLimit-* or Retry-After headers were returned on any
+  unauthenticated response probed on services.amobee.com (2026-08-12), and no
+  429 was observed. Amobee's limit is contractual, not header-signaled — an agent
+  gets no runtime backpressure signal to read.
 rate_limits:
   summary: Amobee does not publish explicit numeric rate limits publicly. The Master Service Agreement (Schedule A) states that API clients must not unreasonably burden the Platform API with ad call volume and must honor Amobee's requests to limit request volume. Social publisher integrations (Facebook, Twitter, Instagram, Pinterest, Snapchat) are subject to rate limits imposed by those respective platforms.
 

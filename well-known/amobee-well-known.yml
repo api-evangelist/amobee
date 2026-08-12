@@ -1,0 +1,71 @@
+generated: '2026-08-12'
+method: searched
+source: live /.well-known/ probes of every host named in apis.yml (www.amobee.com, services.amobee.com, platform.amobee.com)
+note: >-
+  Only one /.well-known/ document is actually served on an Amobee-controlled host —
+  the RFC 9116 security.txt at www.amobee.com — and it is EXPIRED (Expires:
+  2023-12-31). Everything else 404s. www.amobee.com is WordPress and answers 404
+  with a full HTML page, so an HTML body on any of those paths is a miss, not a
+  document. services.amobee.com answers a JSON 404 envelope on every well-known
+  path. The Okta OpenID discovery document is served off-domain by Amobee's own
+  Okta tenant (amobee-platform.okta.com), which is named in the
+  Content-Security-Policy that services.amobee.com returns on its token endpoint —
+  it is recorded as evidence for the console SSO, NOT as an Amobee-served
+  /.well-known/ document, and its scopes are Okta's own org-management scopes,
+  not Amobee API scopes.
+hosts:
+  - host: https://www.amobee.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        content_type: text/plain
+        file: amobee-security.txt
+        expired: true
+        expires: '2023-12-31T20:59:00.000Z'
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+        note: WordPress HTML 404 page, not a document
+      - path: /.well-known/agent.json
+        status: 404
+        note: WordPress HTML 404 page, not a document
+  - host: https://services.amobee.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+off_domain_identity_provider:
+  host: https://amobee-platform.okta.com
+  discovered_via: >-
+    Content-Security-Policy header returned by https://services.amobee.com/accounts/v1/api/token
+    (names amobee-platform.okta.com and amobee-platform.oktapreview.com)
+  documents:
+    - path: /.well-known/openid-configuration
+      status: 200
+      file: amobee-okta-openid-configuration.json
+    - path: /.well-known/oauth-authorization-server
+      status: 200
+      saved: false
+      note: Okta org authorization server metadata; identical issuer, not saved to avoid duplicating the OIDC document
+  caveat: >-
+    scopes_supported in this document are Okta platform scopes (okta.users.read,
+    okta.apps.manage, ...) governing the Okta org itself. They are NOT Amobee
+    Platform API scopes and must never be published as such.

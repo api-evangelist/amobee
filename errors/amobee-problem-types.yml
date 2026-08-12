@@ -1,0 +1,57 @@
+generated: '2026-08-12'
+method: probed
+source: live error responses observed on https://services.amobee.com on 2026-08-12
+format: proprietary
+rfc9457: false
+note: >-
+  Amobee publishes no error reference — the Platform API docs at
+  services.amobee.com/campaign/v3/doc/ return 404 and help.amobee.com is
+  customer-gated. Every entry below was observed on a live unauthenticated
+  request; none is inferred and none is invented. Codes only reachable with
+  credentials (business-rule errors on campaign/v3) are NOT listed.
+envelope:
+  media_type: application/json
+  fields: [timestamp, path, status, error, requestId]
+  correlation: >-
+    requestId in the body matches the x-amobee-cloud-gateway-transaction-id
+    response header; quote it to Amobee support.
+problem_types:
+  - status: 404
+    error: Not Found
+    title: Unknown path on the services gateway
+    observed_at: https://services.amobee.com/campaign/v3/doc/
+    example: '{"timestamp":"2026-08-12T16:48:19.411Z","path":"/campaign/v3/doc/","status":404,"error":"Not Found","requestId":"01dc8e0f-3501855"}'
+    remediation: >-
+      Confirm the service prefix and major version. Note that several historically
+      published Amobee paths, including the campaign/v3 documentation path, now
+      return this error.
+  - status: 405
+    error: Method Not Allowed
+    title: Wrong HTTP method
+    observed_at: https://services.amobee.com/accounts/v1/api/token
+    detail: >-
+      Returned with an 'Allow' response header naming the permitted methods
+      (Allow: POST on the token endpoint).
+    remediation: Re-issue with the method named in the Allow header.
+  - status: 400
+    error: invalid_request
+    title: Malformed or missing client credentials on the token request
+    observed_at: https://services.amobee.com/accounts/v1/api/token
+    example: '{"access_token":null,"token_type":null,"expires_in":null,"error":"invalid_request","error_description":"Unable to parse authorization basic token."}'
+    remediation: >-
+      Send client_id:client_secret as an HTTP Basic Authorization header on the
+      client_credentials token request.
+  - status: 403
+    error: Forbidden
+    title: Path blocked at the gateway
+    observed_at: https://services.amobee.com/actuator
+    detail: HTML body rather than the JSON envelope; the gateway blocks operational paths outright.
+  - status: 500
+    error: Internal Server Error
+    title: Residual Swagger discovery endpoint faults
+    observed_at: https://services.amobee.com/swagger-resources
+    example: '{"timestamp":"2026-08-12T16:48:58.382Z","path":"/swagger-resources","status":500,"error":"Internal Server Error","requestId":"a159ca45-3503423"}'
+    detail: >-
+      The springdoc /swagger-resources endpoint is declared in the served OpenAPI
+      but faults; /swagger-config returns an empty body. Recorded as observed
+      behavior, not as an intended contract.

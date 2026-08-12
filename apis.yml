@@ -16,7 +16,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amobee.png
 url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/apis.yml
 created: "2026-06-13"
-modified: "2026-06-13"
+modified: "2026-08-12"
 specificationVersion: "0.19"
 tags:
   - Digital Advertising
@@ -42,11 +42,13 @@ apis:
       - Creatives
       - Packages
     properties:
-      - type: Documentation
-        url: https://services.amobee.com/campaign/v3/doc/
-      - type: OpenAPI
-        url: https://services.amobee.com/campaign/v3/doc/
       - type: Authentication
+        url: authentication/amobee-authentication.yml
+      - type: Conventions
+        url: conventions/amobee-conventions.yml
+      - type: ErrorCatalog
+        url: errors/amobee-problem-types.yml
+      - type: TermsOfService
         url: https://www.amobee.com/trust/master-service-terms/schedule-a/
       - type: Plans
         url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
@@ -54,6 +56,37 @@ apis:
         url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
       - type: FinOps
         url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: Amobee Support
+        url: https://www.amobee.com/
+        email: ""
+  - aid: amobee:amobee-services-gateway-api
+    name: Amobee Services Gateway API
+    description: >-
+      Public utility surface served by the Amobee services gateway at
+      services.amobee.com — the IAB TCF vendor device-storage disclosure document,
+      a request/IP echo endpoint and a health check. It is the only Amobee API with
+      a live machine-readable contract: an OpenAPI 3.1.0 document is served at
+      https://services.amobee.com/v3/api-docs and was captured verbatim on
+      2026-08-12. It is NOT the Amobee Platform (Campaign) API — that reference was
+      withdrawn (services.amobee.com/campaign/v3/doc/ returns 404).
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://www.amobee.com/
+    baseURL: https://services.amobee.com
+    tags:
+      - Consent
+      - IAB TCF
+      - Diagnostics
+      - Health Check
+    properties:
+      - type: OpenAPI
+        url: openapi/amobee-services-openapi.json
+      - type: Overlay
+        url: overlays/amobee-services-overlay.yaml
+      - type: Conventions
+        url: conventions/amobee-conventions.yml
+      - type: ErrorCatalog
+        url: errors/amobee-problem-types.yml
     contact:
       - FN: Amobee Support
         url: https://www.amobee.com/
@@ -75,10 +108,60 @@ common:
     url: https://www.amobee.com/trust/privacy-policy/
   - type: Website
     url: https://www.amobee.com/
-  - type: Blog
-    url: https://www.amobee.com/blog/
   - type: Login
-    url: https://login.amobee.com/
+    url: https://platform.amobee.com/app/account/index.htm
+  - type: Security
+    url: security/amobee-vulnerability-disclosure.yml
+  - type: WellKnown
+    url: well-known/amobee-well-known.yml
+  - type: SecurityTxt
+    url: well-known/amobee-security.txt
+  - type: Authentication
+    url: authentication/amobee-authentication.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/amobee-lifecycle.yml
+  - type: Conformance
+    url: conformance/amobee-conformance.yml
+  - type: Compliance
+    url: conformance/amobee-conformance.yml
+  - type: Packages
+    url: packages/amobee-packages.yml
+  - type: Overlay
+    url: overlays/amobee-services-overlay.yaml
+  - type: LLMsTxt
+    url: llms/amobee-llms.txt
+  - type: GitHubOrganization
+    url: https://github.com/Amobee
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 12
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Amobee is now operated as Nexxen and its developer surface went with the
+    rebrand — the Platform API reference at services.amobee.com/campaign/v3/doc/
+    returns 404 while the OAuth token endpoint and DSP console still serve existing
+    customers, and the remaining reference lives in a Zendesk help center that
+    refuses anonymous requests (403, Help Center API 401).
+  evidence:
+    - url: https://services.amobee.com/campaign/v3/doc/
+      status: 404
+    - url: https://help.amobee.com/hc/en-us
+      status: 403
+    - url: https://help.amobee.com/api/v2/help_center/en-us/categories.json
+      status: 401
+    - url: https://services.amobee.com/accounts/v1/api/token
+      status: 405
+    - url: https://services.amobee.com/v3/api-docs
+      status: 200
+  checked: '2026-08-12'

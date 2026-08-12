@@ -1,0 +1,50 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  npm registry search, PyPI, Maven Central (search.maven.org), and the Amobee
+  GitHub organization (https://github.com/Amobee) — probed 2026-08-12
+summary: >-
+  Amobee ships NO client SDK for the Platform API in any public registry. The only
+  first-party open source is two general-purpose Java libraries in the Amobee
+  GitHub org, neither of which is an API client and neither of which is published
+  to Maven Central. No SDKs pointer is emitted, because there is no SDK.
+sdk_count: 0
+registries_checked:
+  - registry: npm
+    query: amobee
+    result: no first-party package (only a third-party Cordova AdMob mediation plugin, last published 2017-03-21)
+  - registry: pypi
+    query: amobee
+    result: 404 — no package
+  - registry: maven-central
+    query: 'amobee / g:com.amobee*'
+    result: 0 artifacts
+packages:
+  - language: java
+    registry: github
+    name: freebee
+    coordinates: com.amobee.freebee:freebee
+    url: https://github.com/Amobee/freebee
+    repository: https://github.com/Amobee/freebee
+    description: A free-form boolean expression evaluator (used for ad targeting expression matching).
+    official: true
+    api_client: false
+    version: null
+    published: null
+    note: >-
+      pom.xml declares 2.0.0-SNAPSHOT; the project has no GitHub releases and is
+      absent from Maven Central, so there is no published version or release date
+      to record. Repository last updated 2024-01-11.
+  - language: java
+    registry: github
+    name: scout
+    url: https://github.com/Amobee/scout
+    repository: https://github.com/Amobee/scout
+    description: Fast substring matching library. MIT licensed.
+    official: true
+    api_client: false
+    version: null
+    published: null
+    note: >-
+      No pom.xml on the default branch, no releases, not on Maven Central. Last
+      push 2021-02-10; repository metadata last updated 2024-01-14.
