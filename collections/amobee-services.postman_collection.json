@@ -1,0 +1,1367 @@
+{
+  "item": [
+    {
+      "id": "32ad5a7a-2c9f-47b3-ae21-2c92ce714178",
+      "name": "tcf-disclosure-controller",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bd498771-e8aa-4900-ab55-4491ed2ce926",
+          "name": "get TCF Disclosure",
+          "request": {
+            "name": "get TCF Disclosure",
+            "description": {},
+            "url": {
+              "path": [
+                "files",
+                "TCFDisclosure.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96ac2303-557d-4334-8124-39be49afcb64",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files",
+                    "TCFDisclosure.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5416f875-66be-400e-85c4-ab359508e014",
+          "name": "get TCF Disclosure 1",
+          "request": {
+            "name": "get TCF Disclosure 1",
+            "description": {},
+            "url": {
+              "path": [
+                "files",
+                "TCFDisclosure"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cbdac7f2-82aa-4550-ae6e-d23d00a6363c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "files",
+                    "TCFDisclosure"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "543ce47a-6b88-4565-9a17-b91d0c871349",
+      "name": "ip-controller",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "10bfb03a-5efc-49c3-be61-61123e5fda80",
+          "name": "get",
+          "request": {
+            "name": "get",
+            "description": {},
+            "url": {
+              "path": [
+                "ip"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "abc1a02d-a410-4db5-abc8-78ff01184ecb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ip"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"resolutionType\": \"string\",\n  \"realRemoteAddress\": \"string\",\n  \"xForwardedFor\": \"string\",\n  \"headers\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0dfc35d0-2cf0-4c48-a3ab-8638df36910c",
+      "name": "health-check",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a40131dd-fbbe-40c2-90d0-ee9d23801478",
+          "name": "get Appname",
+          "request": {
+            "name": "get Appname",
+            "description": {},
+            "url": {
+              "path": [
+                "healthcheck",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) ",
+                "key": "headers",
+                "value": "contentLength,<long>,connection,<string>,<string>,ifModifiedSince,<long>,contentType,[object Object],date,<long>,lastModified,<long>,all,[object Object],origin,<string>,location,<uri>,host,[object Object],accept,[object Object],[object Object],acceptLanguageAsLocales,<string>,<string>,acceptPatch,[object Object],[object Object],accessControlAllowCredentials,<boolean>,accessControlAllowHeaders,<string>,<string>,accessControlAllowOrigin,<string>,accessControlExposeHeaders,<string>,<string>,accessControlMaxAge,<long>,accessControlRequestHeaders,<string>,<string>,accessControlRequestMethod,[object Object],acceptCharset,<string>,<string>,bearerAuth,<string>,cacheControl,<string>,contentDisposition,[object Object],contentLanguage,<string>,etag,<string>,expires,<long>,ifMatch,<string>,<string>,ifNoneMatch,<string>,<string>,ifUnmodifiedSince,<long>,pragma,<string>,upgrade,<string>,vary,<string>,<string>,acceptLanguage,[object Object],[object Object],basicAuth,<string>,empty,<boolean>"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b8d34c1-4589-469c-b4bd-f16c7fa4ec64",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "healthcheck",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "headers",
+                    "value": "contentLength,56,connection,string,string,ifModifiedSince,128,contentType,[object Object],date,6331,lastModified,4215,all,[object Object],origin,string,location,https://IpKlwhKuVCQIZJCrvYwDhsOI.ipmcB,4WeBPE,host,[object Object],accept,[object Object],[object Object],acceptLanguageAsLocales,string,string,acceptPatch,[object Object],[object Object],accessControlAllowCredentials,true,accessControlAllowHeaders,string,string,accessControlAllowOrigin,string,accessControlExposeHeaders,string,string,accessControlMaxAge,816,accessControlRequestHeaders,string,string,accessControlRequestMethod,[object Object],acceptCharset,string,string,bearerAuth,string,cacheControl,string,contentDisposition,[object Object],contentLanguage,string,etag,string,expires,2826,ifMatch,string,string,ifNoneMatch,string,string,ifUnmodifiedSince,8554,pragma,string,upgrade,string,vary,string,string,acceptLanguage,[object Object],[object Object],basicAuth,string,empty,false"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "f787f4f5-ee44-4bc4-8df7-22ffc6c94cbb",
+      "name": "env-vars-test-controller",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f99d7d75-2ef1-42da-996b-83af65d9dd48",
+          "name": "get Vars",
+          "request": {
+            "name": "get Vars",
+            "description": {},
+            "url": {
+              "path": [
+                "env-vars-test"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3104ab46-8192-4621-96a1-f31434d65c4d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "env-vars-test"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c9bbdd7a-61be-481c-9b1f-a1eb02dcb1cd",
+      "name": "gateway-swagger-controller",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9a894375-d5e3-41a7-92af-22d749c4424d",
+          "name": "swagger Resources",
+          "request": {
+            "name": "swagger Resources",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c7df335f-c0e2-47d3-ae86-b2855bf8ee6d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cc4a0c56-ce3c-4a8c-bf78-c31141f8d557",
+          "name": "swagger Resources 2",
+          "request": {
+            "name": "swagger Resources 2",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c3a70829-7fb1-48b5-9991-a5bb0cf4cf07",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db0a4a55-84d1-4267-96c4-e56a8aa54037",
+          "name": "swagger Resources 1",
+          "request": {
+            "name": "swagger Resources 1",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "350c9073-543f-40c7-a92a-d2266c7466f9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0b1f618b-458b-4c5b-97a9-a8ba7d1dea09",
+          "name": "swagger Resources 3",
+          "request": {
+            "name": "swagger Resources 3",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1c02df30-941d-414b-b6bd-8bdec230ddc2",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "691313ad-b966-47ff-8f21-ff52250251b3",
+          "name": "swagger Resources 6",
+          "request": {
+            "name": "swagger Resources 6",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "OPTIONS",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d2dd48e1-998a-4d33-93da-3e2531ad4065",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ebb4625c-7878-4fad-b5b0-296ae72955e3",
+          "name": "swagger Resources 5",
+          "request": {
+            "name": "swagger Resources 5",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0970533e-5e9e-4b4c-b108-17ee2587d4d4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fda250f2-4047-46d2-a2b2-db709413004e",
+          "name": "swagger Resources 4",
+          "request": {
+            "name": "swagger Resources 4",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "42ba8d68-7054-472b-9839-4aee748e499a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  },\n  {\n    \"name\": \"string\",\n    \"location\": \"string\",\n    \"swaggerVersion\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7030f187-00c5-4036-82e5-a474032ad745",
+          "name": "swagger Config",
+          "request": {
+            "name": "swagger Config",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6072c388-0b8d-480c-80e3-dfdbb78f3712",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c7c61afb-2c43-40cc-ba17-6eb21873ed3e",
+          "name": "swagger Config 2",
+          "request": {
+            "name": "swagger Config 2",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77d49a93-a93a-467f-ae51-35961c2f7ddb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7d6faa7-ebe6-4da8-9072-8b8eb162a559",
+          "name": "swagger Config 1",
+          "request": {
+            "name": "swagger Config 1",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7841984b-e098-4952-a243-d96297cc5497",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6673fa12-7889-4491-8955-b2a221f80ca3",
+          "name": "swagger Config 3",
+          "request": {
+            "name": "swagger Config 3",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8464fc70-a776-4cd3-9453-5d91561807f0",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db32c36a-7895-451c-a815-1d29a0d50cdd",
+          "name": "swagger Config 6",
+          "request": {
+            "name": "swagger Config 6",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "OPTIONS",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "584737a7-e7d7-4af8-b7be-b2edb125a984",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "51986e3f-ec97-4839-b227-f25784f57d81",
+          "name": "swagger Config 5",
+          "request": {
+            "name": "swagger Config 5",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c5e363de-df6b-49cf-8c48-3b580e4550c4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd2696bd-324a-47c0-85a7-ccc63a84e005",
+          "name": "swagger Config 4",
+          "request": {
+            "name": "swagger Config 4",
+            "description": {},
+            "url": {
+              "path": [
+                "swagger-config"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cc213287-7fc1-4f04-8543-206ffaa9529b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger-config"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"key_0\": {},\n  \"key_1\": {},\n  \"key_2\": {},\n  \"key_3\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://services.amobee.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d52000e2-6f70-4479-bb89-3279cafa15d3",
+    "name": "OpenAPI definition",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "OpenAPI definition",
+    "version": "v0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "tcf-disclosure-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getTCFDisclosure",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/files/TCFDisclosure.json"
+          }
+        },
+        {
+          "info": {
+            "name": "getTCFDisclosure_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/files/TCFDisclosure"
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ip-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "get",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/ip"
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "health-check",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getAppname",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/healthcheck/status",
+            "headers": [
+              {
+                "name": "headers",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "env-vars-test-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getVars",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/env-vars-test"
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "gateway-swagger-controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "swaggerResources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerResources_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerResources_2",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerResources_4",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerResources_3",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerResources_5",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerResources_6",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://services.amobee.com/swagger-resources"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig_1",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig_2",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig_4",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig_3",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig_5",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        },
+        {
+          "info": {
+            "name": "swaggerConfig_6",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://services.amobee.com/swagger-config"
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
