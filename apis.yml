@@ -37,69 +37,116 @@ tags_raw:
   - Ad Tech
   - Samsung Ads
 apis:
-  - aid: amobee:amobee-campaign-api
-    name: Amobee Campaign API
-    description: REST API for managing cross-channel advertising campaigns including advertisers, insertion orders, line items, packages, creatives, and ads across programmatic channels. Authentication uses OAuth2 client credentials flow against the Amobee accounts service.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.amobee.com/
-    baseURL: https://services.amobee.com/campaign/v3/api
-    tags:
-      - Campaigns
-      - Advertisers
-      - Line Items
-      - Insertion Orders
-      - Creatives
-      - Packages
-    properties:
-      - type: Authentication
-        url: authentication/amobee-authentication.yml
-      - type: Conventions
-        url: conventions/amobee-conventions.yml
-      - type: ErrorCatalog
-        url: errors/amobee-problem-types.yml
-      - type: TermsOfService
-        url: https://www.amobee.com/trust/master-service-terms/schedule-a/
-      - type: Plans
-        url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
-      - type: RateLimits
-        url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
-      - type: FinOps
-        url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
-    contact:
-      - FN: Amobee Support
-        url: https://www.amobee.com/
-        email: ""
-  - aid: amobee:amobee-services-gateway-api
-    name: Amobee Services Gateway API
-    description: >-
-      Public utility surface served by the Amobee services gateway at
-      services.amobee.com — the IAB TCF vendor device-storage disclosure document,
-      a request/IP echo endpoint and a health check. It is the only Amobee API with
-      a live machine-readable contract: an OpenAPI 3.1.0 document is served at
-      https://services.amobee.com/v3/api-docs and was captured verbatim on
-      2026-08-12. It is NOT the Amobee Platform (Campaign) API — that reference was
-      withdrawn (services.amobee.com/campaign/v3/doc/ returns 404).
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.amobee.com/
-    baseURL: https://services.amobee.com
-    tags:
-      - Consent
-      - IAB TCF
-      - Diagnostics
-      - Health Check
-    properties:
-      - type: OpenAPI
-        url: openapi/amobee-services-openapi.json
-      - type: Overlay
-        url: overlays/amobee-services-overlay.yaml
-      - type: Conventions
-        url: conventions/amobee-conventions.yml
-      - type: ErrorCatalog
-        url: errors/amobee-problem-types.yml
-    contact:
-      - FN: Amobee Support
-        url: https://www.amobee.com/
-        email: ""
+- aid: amobee:amobee-campaign-api
+  name: Amobee Campaign API
+  description: >-
+    REST API for managing cross-channel advertising campaigns including advertisers, insertion orders,
+    line items, packages, creatives, and ads across programmatic channels. Authentication uses OAuth2
+    client credentials flow against the Amobee accounts service.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.amobee.com/
+  baseURL: https://services.amobee.com/campaign/v3/api
+  tags:
+  - Campaigns
+  - Advertisers
+  - Line Items
+  - Insertion Orders
+  - Creatives
+  - Packages
+  properties:
+  - type: Authentication
+    url: authentication/amobee-authentication.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
+  - type: TermsOfService
+    url: https://www.amobee.com/trust/master-service-terms/schedule-a/
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
+  contact:
+  - FN: Amobee Support
+    url: https://www.amobee.com/
+    email: ''
+- aid: amobee:amobee-env-vars-test-controller-api
+  name: Amobee Env Vars Test Controller API
+  description: >-
+    The env-vars-test-controller API from Amobee — 1 operation(s) for env-vars-test-controller.
+  humanURL: https://www.amobee.com/
+  baseURL: https://services.amobee.com/campaign/v3/api
+  tags:
+  - env-vars-test-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/amobee-env-vars-test-controller-api-openapi.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
+- aid: amobee:amobee-gateway-swagger-controller-api
+  name: Amobee Gateway Swagger Controller API
+  description: >-
+    The gateway-swagger-controller API from Amobee — 2 operation(s) for gateway-swagger-controller.
+  humanURL: https://www.amobee.com/
+  baseURL: https://services.amobee.com/campaign/v3/api
+  tags:
+  - gateway-swagger-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/amobee-gateway-swagger-controller-api-openapi.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
+- aid: amobee:amobee-health-check-api
+  name: Amobee Health Check API
+  description: The health-check API from Amobee — 1 operation(s) for health-check.
+  humanURL: https://www.amobee.com/
+  baseURL: https://services.amobee.com/campaign/v3/api
+  tags:
+  - health-check
+  properties:
+  - type: OpenAPI
+    url: openapi/amobee-health-check-api-openapi.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
+- aid: amobee:amobee-ip-controller-api
+  name: Amobee Ip Controller API
+  description: The ip-controller API from Amobee — 1 operation(s) for ip-controller.
+  humanURL: https://www.amobee.com/
+  baseURL: https://services.amobee.com/campaign/v3/api
+  tags:
+  - ip-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/amobee-ip-controller-api-openapi.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
+- aid: amobee:amobee-tcf-disclosure-controller-api
+  name: Amobee Tcf Disclosure Controller API
+  description: >-
+    The tcf-disclosure-controller API from Amobee — 2 operation(s) for tcf-disclosure-controller.
+  humanURL: https://www.amobee.com/
+  baseURL: https://services.amobee.com/campaign/v3/api
+  tags:
+  - tcf-disclosure-controller
+  properties:
+  - type: OpenAPI
+    url: openapi/amobee-tcf-disclosure-controller-api-openapi.yml
+  - type: Conventions
+    url: conventions/amobee-conventions.yml
+  - type: ErrorCatalog
+    url: errors/amobee-problem-types.yml
 common:
   - type: VulnerabilityDisclosure
     url: security/amobee-vulnerability-disclosure.yml
