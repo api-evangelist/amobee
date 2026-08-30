@@ -1,0 +1,23 @@
+openapi: 3.2.0
+info:
+  title: OpenAPI definition Env Vars Test Controller API
+  version: v0
+servers:
+- url: https://services.amobee.com
+  description: Generated server url
+tags:
+- name: env-vars-test-controller
+paths:
+  /env-vars-test:
+    get:
+      tags:
+      - env-vars-test-controller
+      operationId: getVars
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}

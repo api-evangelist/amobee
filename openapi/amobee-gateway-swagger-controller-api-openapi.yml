@@ -1,0 +1,198 @@
+openapi: 3.2.0
+info:
+  title: OpenAPI definition Gateway Swagger Controller API
+  version: v0
+servers:
+- url: https://services.amobee.com
+  description: Generated server url
+tags:
+- name: gateway-swagger-controller
+paths:
+  /swagger-resources:
+    get:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+    put:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources_2
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+    post:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources_1
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+    delete:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources_3
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+    options:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources_6
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+    head:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources_5
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+    patch:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerResources_4
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwaggerResource'
+  /swagger-config:
+    get:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+    put:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig_2
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+    post:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig_1
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+    delete:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig_3
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+    options:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig_6
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+    head:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig_5
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+    patch:
+      tags:
+      - gateway-swagger-controller
+      operationId: swaggerConfig_4
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties: {}
+components:
+  schemas:
+    SwaggerResource:
+      type: object
+      properties:
+        name:
+          type: string
+        location:
+          type: string
+        swaggerVersion:
+          type: string

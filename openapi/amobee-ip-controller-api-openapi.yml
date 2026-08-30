@@ -1,0 +1,39 @@
+openapi: 3.2.0
+info:
+  title: OpenAPI definition Ip Controller API
+  version: v0
+servers:
+- url: https://services.amobee.com
+  description: Generated server url
+tags:
+- name: ip-controller
+paths:
+  /ip:
+    get:
+      tags:
+      - ip-controller
+      operationId: get
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/IpResponse'
+components:
+  schemas:
+    IpResponse:
+      type: object
+      properties:
+        resolutionType:
+          type: string
+        realRemoteAddress:
+          type: string
+        xForwardedFor:
+          type: string
+        headers:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
