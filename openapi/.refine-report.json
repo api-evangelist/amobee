@@ -1,0 +1,33 @@
+{
+  "provider": "amobee",
+  "sources": [
+    "_original/amobee-services-openapi.json"
+  ],
+  "outputs": [
+    "amobee-env-vars-test-controller-api-openapi.yml",
+    "amobee-gateway-swagger-controller-api-openapi.yml",
+    "amobee-health-check-api-openapi.yml",
+    "amobee-ip-controller-api-openapi.yml",
+    "amobee-tcf-disclosure-controller-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amobee-services-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "amobee-services-openapi.json: declared missing tag: env-vars-test-controller",
+    "amobee-services-openapi.json: declared missing tag: gateway-swagger-controller",
+    "amobee-services-openapi.json: declared missing tag: health-check",
+    "amobee-services-openapi.json: declared missing tag: ip-controller",
+    "amobee-services-openapi.json: declared missing tag: tcf-disclosure-controller",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "amobee-env-vars-test-controller-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amobee-gateway-swagger-controller-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amobee-health-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amobee-ip-controller-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amobee-tcf-disclosure-controller-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}

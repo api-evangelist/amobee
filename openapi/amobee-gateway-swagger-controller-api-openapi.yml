@@ -22,6 +22,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources
+      x-summary-source: derived
     put:
       tags:
       - gateway-swagger-controller
@@ -35,6 +37,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources 2
+      x-summary-source: derived
     post:
       tags:
       - gateway-swagger-controller
@@ -48,6 +52,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources 1
+      x-summary-source: derived
     delete:
       tags:
       - gateway-swagger-controller
@@ -61,6 +67,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources 3
+      x-summary-source: derived
     options:
       tags:
       - gateway-swagger-controller
@@ -74,6 +82,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources 6
+      x-summary-source: derived
     head:
       tags:
       - gateway-swagger-controller
@@ -87,6 +97,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources 5
+      x-summary-source: derived
     patch:
       tags:
       - gateway-swagger-controller
@@ -100,6 +112,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SwaggerResource'
+      summary: Swagger resources 4
+      x-summary-source: derived
   /swagger-config:
     get:
       tags:
@@ -113,6 +127,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config
+      x-summary-source: derived
     put:
       tags:
       - gateway-swagger-controller
@@ -125,6 +141,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config 2
+      x-summary-source: derived
     post:
       tags:
       - gateway-swagger-controller
@@ -137,6 +155,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config 1
+      x-summary-source: derived
     delete:
       tags:
       - gateway-swagger-controller
@@ -149,6 +169,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config 3
+      x-summary-source: derived
     options:
       tags:
       - gateway-swagger-controller
@@ -161,6 +183,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config 6
+      x-summary-source: derived
     head:
       tags:
       - gateway-swagger-controller
@@ -173,6 +197,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config 5
+      x-summary-source: derived
     patch:
       tags:
       - gateway-swagger-controller
@@ -185,6 +211,8 @@ paths:
               schema:
                 type: object
                 additionalProperties: {}
+      summary: Swagger config 4
+      x-summary-source: derived
 components:
   schemas:
     SwaggerResource:

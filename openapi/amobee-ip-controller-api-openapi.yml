@@ -20,6 +20,8 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/IpResponse'
+      summary: Get
+      x-summary-source: derived
 components:
   schemas:
     IpResponse:

@@ -20,6 +20,8 @@ paths:
             application/json:
               schema:
                 type: string
+      summary: Get TCF disclosure
+      x-summary-source: derived
   /files/TCFDisclosure:
     get:
       tags:
@@ -32,3 +34,5 @@ paths:
             application/json:
               schema:
                 type: string
+      summary: Get TCF disclosure 1
+      x-summary-source: derived
