@@ -30,48 +30,7 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    HttpRange: {}
-    ContentDisposition:
-      type: object
-      properties:
-        type:
-          type: string
-        name:
-          type: string
-        filename:
-          type: string
-        charset:
-          type: string
-        attachment:
-          type: boolean
-        formData:
-          type: boolean
-        inline:
-          type: boolean
-    MediaType:
-      type: object
-      properties:
-        type:
-          type: string
-        subtype:
-          type: string
-        parameters:
-          type: object
-          additionalProperties:
-            type: string
-        qualityValue:
-          type: number
-          format: double
-        concrete:
-          type: boolean
-        charset:
-          type: string
-        wildcardType:
-          type: boolean
-        wildcardSubtype:
-          type: boolean
-        subtypeSuffix:
-          type: string
+    HttpMethod: {}
     HttpHeaders:
       type: object
       properties:
@@ -245,4 +204,45 @@ components:
           writeOnly: true
         empty:
           type: boolean
-    HttpMethod: {}
+    HttpRange: {}
+    ContentDisposition:
+      type: object
+      properties:
+        type:
+          type: string
+        name:
+          type: string
+        filename:
+          type: string
+        charset:
+          type: string
+        attachment:
+          type: boolean
+        formData:
+          type: boolean
+        inline:
+          type: boolean
+    MediaType:
+      type: object
+      properties:
+        type:
+          type: string
+        subtype:
+          type: string
+        parameters:
+          type: object
+          additionalProperties:
+            type: string
+        qualityValue:
+          type: number
+          format: double
+        concrete:
+          type: boolean
+        charset:
+          type: string
+        wildcardType:
+          type: boolean
+        wildcardSubtype:
+          type: boolean
+        subtypeSuffix:
+          type: string
