@@ -1,0 +1,12 @@
+{
+ "url": "https://services.amobee.com/v3/api-docs",
+ "requested_url": "https://services.amobee.com/v3/api-docs",
+ "status": 200,
+ "content_type": "application/json",
+ "bytes": 8266,
+ "sha256": "22abd388a83f40dff71bfd3d1c60084f2d1678062d318e4209221c4873293ea7",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "equivalent",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the provider's current document describes the same operations (Jaccard 1.0), but the bytes differ, so the archive is an earlier or reformatted copy."
+}
