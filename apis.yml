@@ -168,6 +168,8 @@ apis:
   - type: ErrorCatalog
     url: errors/amobee-problem-types.yml
 common:
+  - type: Pricing
+    url: https://www.amobee.com/trust/master-service-terms/schedule-a/
   - type: VulnerabilityDisclosure
     url: security/amobee-vulnerability-disclosure.yml
   - type: DomainSecurity
