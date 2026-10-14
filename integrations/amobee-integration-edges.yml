@@ -1,0 +1,50 @@
+generated: '2026-10-14'
+edges:
+- partner_name: mParticle
+  partner: mparticle
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://docs.mparticle.com/integrations/amobee/audience/
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - amobee
+      integration_types:
+      - audience
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: Hightouch
+  partner: hightouch
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://hightouch.com/docs/destinations/amobee
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - amobee
+      status: released
+      sync_types:
+      - Any data set
+      sync_modes:
+      - insert only
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+method: searched
+checked:
+- https://docs.mparticle.com/integrations/amobee/audience/
+- https://hightouch.com/docs/destinations/amobee
+source:
+- https://docs.mparticle.com/integrations/amobee/audience/
+- https://hightouch.com/docs/destinations/amobee
