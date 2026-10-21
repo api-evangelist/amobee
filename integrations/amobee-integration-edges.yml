@@ -1,4 +1,21 @@
-generated: '2026-10-14'
+generated: '2026-10-20'
+method: searched
+source:
+- https://docs.mparticle.com/integrations/amobee/audience/
+- https://hightouch.com/docs/destinations/amobee
+- https://zapier.com/apps/amobee/integrations
+- https://n8n.io/integrations/amobee/
+- https://composio.dev/toolkits/amobee
+- https://monid.ai/tools/amobee
+checked:
+- https://docs.mparticle.com/integrations/amobee/audience/
+- https://hightouch.com/docs/destinations/amobee
+- https://composio.dev/toolkits/amobee
+- https://monid.ai/tools/amobee
+- https://n8n.io/integrations/amobee/
+- https://zapier.com/apps/amobee/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: mParticle
   partner: mparticle
@@ -41,10 +58,4 @@ edges:
       - insert only
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
-method: searched
-checked:
-- https://docs.mparticle.com/integrations/amobee/audience/
-- https://hightouch.com/docs/destinations/amobee
-source:
-- https://docs.mparticle.com/integrations/amobee/audience/
-- https://hightouch.com/docs/destinations/amobee
+templates: []

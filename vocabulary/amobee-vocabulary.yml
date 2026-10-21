@@ -1,0 +1,67 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/amobee-env-vars-test-controller-api-openapi.yml
+- openapi/amobee-gateway-swagger-controller-api-openapi.yml
+- openapi/amobee-health-check-api-openapi.yml
+- openapi/amobee-ip-controller-api-openapi.yml
+- openapi/amobee-tcf-disclosure-controller-api-openapi.yml
+vocabulary:
+  name: Amobee Domain Vocabulary
+  description: 'Terms declared by Amobee''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: SwaggerResource
+    definition: 'Object declared by the contract with fields: name, location, swaggerVersion.'
+    tags:
+    - Object
+    source: openapi/amobee-gateway-swagger-controller-api-openapi.yml#/components/schemas/SwaggerResource
+  - term: HttpHeaders
+    definition: 'Object declared by the contract with fields: contentLength, connection, ifModifiedSince, contentType, date, lastModified, all,
+      range, origin, location, host, allow. (27 more)'
+    tags:
+    - Object
+    source: openapi/amobee-health-check-api-openapi.yml#/components/schemas/HttpHeaders
+  - term: MediaType
+    definition: 'Object declared by the contract with fields: type, subtype, parameters, qualityValue, concrete, charset, wildcardType, wildcardSubtype,
+      subtypeSuffix.'
+    tags:
+    - Object
+    source: openapi/amobee-health-check-api-openapi.yml#/components/schemas/MediaType
+  - term: ContentDisposition
+    definition: 'Object declared by the contract with fields: type, name, filename, charset, attachment, formData, inline.'
+    tags:
+    - Object
+    source: openapi/amobee-health-check-api-openapi.yml#/components/schemas/ContentDisposition
+  - term: IpResponse
+    definition: 'Object declared by the contract with fields: resolutionType, realRemoteAddress, xForwardedFor, headers.'
+    tags:
+    - Object
+    source: openapi/amobee-ip-controller-api-openapi.yml#/components/schemas/IpResponse
+  - term: env-vars-test-controller
+    definition: 'Resource group in the contract; its operation GET /env-vars-test: Get vars'
+    tags:
+    - Resource Group
+    source: openapi/amobee-env-vars-test-controller-api-openapi.yml
+  - term: gateway-swagger-controller
+    definition: 'Resource group in the contract; its operation GET /swagger-resources: Swagger resources'
+    tags:
+    - Resource Group
+    source: openapi/amobee-gateway-swagger-controller-api-openapi.yml
+  - term: Health Check
+    definition: 'Resource group in the contract; its operation GET /healthcheck/status: Get appname'
+    tags:
+    - Resource Group
+    source: openapi/amobee-health-check-api-openapi.yml
+  - term: ip-controller
+    definition: 'Resource group in the contract; its operation GET /ip: Get'
+    tags:
+    - Resource Group
+    source: openapi/amobee-ip-controller-api-openapi.yml
+  - term: tcf-disclosure-controller
+    definition: 'Resource group in the contract; its operation GET /files/TCFDisclosure.json: Get TCF disclosure'
+    tags:
+    - Resource Group
+    source: openapi/amobee-tcf-disclosure-controller-api-openapi.yml

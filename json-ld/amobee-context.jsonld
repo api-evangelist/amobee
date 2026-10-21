@@ -1,0 +1,253 @@
+{
+  "@context": {
+    "@vocab": "https://amobee.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "amobee": "https://amobee.com/schema#",
+    "SwaggerResource": "amobee:SwaggerResource",
+    "name": {
+      "@id": "amobee:name",
+      "@type": "xsd:string"
+    },
+    "location": {
+      "@id": "amobee:location",
+      "@type": "xsd:string"
+    },
+    "swaggerVersion": {
+      "@id": "amobee:swaggerVersion",
+      "@type": "xsd:string"
+    },
+    "HttpHeaders": "amobee:HttpHeaders",
+    "contentLength": {
+      "@id": "amobee:contentLength",
+      "@type": "xsd:integer"
+    },
+    "connection": {
+      "@id": "amobee:connection",
+      "@container": "@list"
+    },
+    "ifModifiedSince": {
+      "@id": "amobee:ifModifiedSince",
+      "@type": "xsd:integer"
+    },
+    "contentType": {
+      "@id": "amobee:contentType",
+      "@type": "@id"
+    },
+    "date": {
+      "@id": "amobee:date",
+      "@type": "xsd:integer"
+    },
+    "lastModified": {
+      "@id": "amobee:lastModified",
+      "@type": "xsd:integer"
+    },
+    "all": {
+      "@id": "amobee:all"
+    },
+    "range": {
+      "@id": "amobee:range",
+      "@container": "@list"
+    },
+    "origin": {
+      "@id": "amobee:origin",
+      "@type": "xsd:string"
+    },
+    "host": {
+      "@id": "amobee:host"
+    },
+    "allow": {
+      "@id": "amobee:allow",
+      "@container": "@list"
+    },
+    "accept": {
+      "@id": "amobee:accept",
+      "@container": "@list"
+    },
+    "acceptLanguageAsLocales": {
+      "@id": "amobee:acceptLanguageAsLocales",
+      "@container": "@list"
+    },
+    "acceptPatch": {
+      "@id": "amobee:acceptPatch",
+      "@container": "@list"
+    },
+    "accessControlAllowCredentials": {
+      "@id": "amobee:accessControlAllowCredentials",
+      "@type": "xsd:boolean"
+    },
+    "accessControlAllowHeaders": {
+      "@id": "amobee:accessControlAllowHeaders",
+      "@container": "@list"
+    },
+    "accessControlAllowMethods": {
+      "@id": "amobee:accessControlAllowMethods",
+      "@container": "@list"
+    },
+    "accessControlAllowOrigin": {
+      "@id": "amobee:accessControlAllowOrigin",
+      "@type": "xsd:string"
+    },
+    "accessControlExposeHeaders": {
+      "@id": "amobee:accessControlExposeHeaders",
+      "@container": "@list"
+    },
+    "accessControlMaxAge": {
+      "@id": "amobee:accessControlMaxAge",
+      "@type": "xsd:integer"
+    },
+    "accessControlRequestHeaders": {
+      "@id": "amobee:accessControlRequestHeaders",
+      "@container": "@list"
+    },
+    "accessControlRequestMethod": {
+      "@id": "amobee:accessControlRequestMethod",
+      "@type": "@id"
+    },
+    "acceptCharset": {
+      "@id": "amobee:acceptCharset",
+      "@container": "@list"
+    },
+    "bearerAuth": {
+      "@id": "amobee:bearerAuth",
+      "@type": "xsd:string"
+    },
+    "cacheControl": {
+      "@id": "amobee:cacheControl",
+      "@type": "xsd:string"
+    },
+    "contentDisposition": {
+      "@id": "amobee:contentDisposition",
+      "@type": "@id"
+    },
+    "contentLanguage": {
+      "@id": "amobee:contentLanguage",
+      "@type": "xsd:string"
+    },
+    "etag": {
+      "@id": "amobee:etag",
+      "@type": "xsd:string"
+    },
+    "expires": {
+      "@id": "amobee:expires",
+      "@type": "xsd:integer"
+    },
+    "ifMatch": {
+      "@id": "amobee:ifMatch",
+      "@container": "@list"
+    },
+    "ifNoneMatch": {
+      "@id": "amobee:ifNoneMatch",
+      "@container": "@list"
+    },
+    "ifUnmodifiedSince": {
+      "@id": "amobee:ifUnmodifiedSince",
+      "@type": "xsd:integer"
+    },
+    "pragma": {
+      "@id": "amobee:pragma",
+      "@type": "xsd:string"
+    },
+    "upgrade": {
+      "@id": "amobee:upgrade",
+      "@type": "xsd:string"
+    },
+    "vary": {
+      "@id": "amobee:vary",
+      "@container": "@list"
+    },
+    "acceptLanguage": {
+      "@id": "amobee:acceptLanguage",
+      "@container": "@list"
+    },
+    "basicAuth": {
+      "@id": "amobee:basicAuth",
+      "@type": "xsd:string"
+    },
+    "empty": {
+      "@id": "amobee:empty",
+      "@type": "xsd:boolean"
+    },
+    "MediaType": "amobee:MediaType",
+    "type": {
+      "@id": "amobee:type",
+      "@type": "xsd:string"
+    },
+    "subtype": {
+      "@id": "amobee:subtype",
+      "@type": "xsd:string"
+    },
+    "parameters": {
+      "@id": "amobee:parameters"
+    },
+    "qualityValue": {
+      "@id": "amobee:qualityValue",
+      "@type": "xsd:decimal"
+    },
+    "concrete": {
+      "@id": "amobee:concrete",
+      "@type": "xsd:boolean"
+    },
+    "charset": {
+      "@id": "amobee:charset",
+      "@type": "xsd:string"
+    },
+    "wildcardType": {
+      "@id": "amobee:wildcardType",
+      "@type": "xsd:boolean"
+    },
+    "wildcardSubtype": {
+      "@id": "amobee:wildcardSubtype",
+      "@type": "xsd:boolean"
+    },
+    "subtypeSuffix": {
+      "@id": "amobee:subtypeSuffix",
+      "@type": "xsd:string"
+    },
+    "ContentDisposition": "amobee:ContentDisposition",
+    "filename": {
+      "@id": "amobee:filename",
+      "@type": "xsd:string"
+    },
+    "attachment": {
+      "@id": "amobee:attachment",
+      "@type": "xsd:boolean"
+    },
+    "formData": {
+      "@id": "amobee:formData",
+      "@type": "xsd:boolean"
+    },
+    "inline": {
+      "@id": "amobee:inline",
+      "@type": "xsd:boolean"
+    },
+    "IpResponse": "amobee:IpResponse",
+    "resolutionType": {
+      "@id": "amobee:resolutionType",
+      "@type": "xsd:string"
+    },
+    "realRemoteAddress": {
+      "@id": "amobee:realRemoteAddress",
+      "@type": "xsd:string"
+    },
+    "xForwardedFor": {
+      "@id": "amobee:xForwardedFor",
+      "@type": "xsd:string"
+    },
+    "headers": {
+      "@id": "amobee:headers"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Amobee API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Amobee's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/amobee-env-vars-test-controller-api-openapi.yml, openapi/amobee-gateway-swagger-controller-api-openapi.yml, openapi/amobee-health-check-api-openapi.yml.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/amobee-env-vars-test-controller-api-openapi.yml",
+    "openapi/amobee-gateway-swagger-controller-api-openapi.yml",
+    "openapi/amobee-health-check-api-openapi.yml",
+    "openapi/amobee-ip-controller-api-openapi.yml",
+    "openapi/amobee-tcf-disclosure-controller-api-openapi.yml"
+  ]
+}

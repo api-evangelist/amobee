@@ -15,7 +15,7 @@ envelope:
   correlation: >-
     requestId in the body matches the x-amobee-cloud-gateway-transaction-id
     response header; quote it to Amobee support.
-problem_types:
+problems:
   - status: 404
     error: Not Found
     title: Unknown path on the services gateway

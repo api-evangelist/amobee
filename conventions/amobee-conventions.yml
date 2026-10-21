@@ -55,6 +55,7 @@ request_tracing:
   gateway_marker: 'x-amobee-cloud-gateway: true'
   observed: '2026-08-12'
 idempotency:
+  coverage: none
   supported: unknown
   evidence: none
   note: >-

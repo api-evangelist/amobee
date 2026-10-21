@@ -1,0 +1,94 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/amobee-env-vars-test-controller-api-openapi.yml
+- openapi/amobee-gateway-swagger-controller-api-openapi.yml
+- openapi/amobee-health-check-api-openapi.yml
+- openapi/amobee-ip-controller-api-openapi.yml
+- openapi/amobee-tcf-disclosure-controller-api-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.amobee.com, services.amobee.com, www.amobee.com, platform.amobee.com;
+  verdict opaque (https://www.amobee.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 15 operation(s) in the provider''s own OpenAPI (15 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: get_vars
+  operationId: getVars
+  method: GET
+  path: /env-vars-test
+  description: Get vars
+- name: swagger_resources
+  operationId: swaggerResources
+  method: GET
+  path: /swagger-resources
+  description: Swagger resources
+- name: get_appname
+  operationId: getAppname
+  method: GET
+  path: /healthcheck/status
+  description: Get appname
+- name: get
+  operationId: get
+  method: GET
+  path: /ip
+  description: Get
+- name: get_tcfdisclosure
+  operationId: getTCFDisclosure
+  method: GET
+  path: /files/TCFDisclosure.json
+  description: Get TCF disclosure
+- name: swagger_resources_2
+  operationId: swaggerResources_2
+  method: PUT
+  path: /swagger-resources
+  description: Swagger resources 2
+- name: get_tcfdisclosure_1
+  operationId: getTCFDisclosure_1
+  method: GET
+  path: /files/TCFDisclosure
+  description: Get TCF disclosure 1
+- name: swagger_resources_1
+  operationId: swaggerResources_1
+  method: POST
+  path: /swagger-resources
+  description: Swagger resources 1
+- name: swagger_resources_3
+  operationId: swaggerResources_3
+  method: DELETE
+  path: /swagger-resources
+  description: Swagger resources 3
+- name: swagger_resources_4
+  operationId: swaggerResources_4
+  method: PATCH
+  path: /swagger-resources
+  description: Swagger resources 4
+- name: swagger_config
+  operationId: swaggerConfig
+  method: GET
+  path: /swagger-config
+  description: Swagger config
+- name: swagger_config_2
+  operationId: swaggerConfig_2
+  method: PUT
+  path: /swagger-config
+  description: Swagger config 2
+- name: swagger_config_1
+  operationId: swaggerConfig_1
+  method: POST
+  path: /swagger-config
+  description: Swagger config 1
+- name: swagger_config_3
+  operationId: swaggerConfig_3
+  method: DELETE
+  path: /swagger-config
+  description: Swagger config 3
+- name: swagger_config_4
+  operationId: swaggerConfig_4
+  method: PATCH
+  path: /swagger-config
+  description: Swagger config 4

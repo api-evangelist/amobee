@@ -13,7 +13,7 @@ x-provenance:
     supplies identity and taxonomy only. It adds no endpoint, parameter, schema or
     behavior that the served document does not already declare, and it does not
     touch the original file.
-extends: openapi/amobee-services-openapi.json
+extends: ../openapi/_original/amobee-services-openapi.json
 actions:
   - target: $.info
     update:

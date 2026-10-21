@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amobee/main/json-schema/amobee-swagger-resource-schema.json",
+  "title": "SwaggerResource",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/amobee-gateway-swagger-controller-api-openapi.yml#/components/schemas/SwaggerResource",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "swaggerVersion": {
+      "type": "string"
+    }
+  }
+}

@@ -1,29 +1,49 @@
 generated: '2026-08-12'
 method: searched
 source: https://www.amobee.com/trust/master-service-terms/schedule-a/
+name: Amobee API Rate Limits
 limit_count: 0
 headers_observed: []
-headers_note: >-
-  No X-RateLimit-*, RateLimit-* or Retry-After headers were returned on any
-  unauthenticated response probed on services.amobee.com (2026-08-12), and no
-  429 was observed. Amobee's limit is contractual, not header-signaled — an agent
+headers_note: No X-RateLimit-*, RateLimit-* or Retry-After headers were returned on any unauthenticated response probed on
+  services.amobee.com (2026-08-12), and no 429 was observed. Amobee's limit is contractual, not header-signaled — an agent
   gets no runtime backpressure signal to read.
 rate_limits:
-  summary: Amobee does not publish explicit numeric rate limits publicly. The Master Service Agreement (Schedule A) states that API clients must not unreasonably burden the Platform API with ad call volume and must honor Amobee's requests to limit request volume. Social publisher integrations (Facebook, Twitter, Instagram, Pinterest, Snapchat) are subject to rate limits imposed by those respective platforms.
-
+  summary: Amobee does not publish explicit numeric rate limits publicly. The Master Service Agreement (Schedule A) states
+    that API clients must not unreasonably burden the Platform API with ad call volume and must honor Amobee's requests to
+    limit request volume. Social publisher integrations (Facebook, Twitter, Instagram, Pinterest, Snapchat) are subject to
+    rate limits imposed by those respective platforms.
   policies:
-    - name: General API Usage
-      description: API clients connecting directly to the Platform API (https://services.amobee.com/campaign/v3/api) must operate within reasonable volume thresholds. Amobee may request clients to reduce request volume at any time and clients are contractually obligated to comply.
-      enforcement: contractual
-      source: https://www.amobee.com/trust/master-service-terms/schedule-a/
-
-    - name: Social Publisher API Limits
-      description: Amobee's integrations with social publishers (Facebook/Instagram, Twitter, Pinterest, Snapchat) are subject to those platforms' own API rate limits. Amobee passes these limits through to clients using social inventory buying features.
-      enforcement: platform
-      source: https://www.amobee.com/trust/master-service-terms/schedule-c/
-
+  - name: General API Usage
+    description: API clients connecting directly to the Platform API (https://services.amobee.com/campaign/v3/api) must operate
+      within reasonable volume thresholds. Amobee may request clients to reduce request volume at any time and clients are
+      contractually obligated to comply.
+    enforcement: contractual
+    source: https://www.amobee.com/trust/master-service-terms/schedule-a/
+  - name: Social Publisher API Limits
+    description: Amobee's integrations with social publishers (Facebook/Instagram, Twitter, Pinterest, Snapchat) are subject
+      to those platforms' own API rate limits. Amobee passes these limits through to clients using social inventory buying
+      features.
+    enforcement: platform
+    source: https://www.amobee.com/trust/master-service-terms/schedule-c/
   authentication_endpoint:
     url: https://services.amobee.com/accounts/v1/api/token
     method: POST
     grant_type: client_credentials
-    notes: Access tokens are obtained via OAuth2 client credentials flow using client_id and client_secret provisioned by Amobee. Tokens are passed as Bearer tokens in the Authorization header on all Campaign API requests.
+    notes: Access tokens are obtained via OAuth2 client credentials flow using client_id and client_secret provisioned by
+      Amobee. Tokens are passed as Bearer tokens in the Authorization header on all Campaign API requests.
+limits:
+- name: General API Usage
+  scope: per-client
+  enforcement: contractual
+  description: API clients connecting directly to the Platform API (https://services.amobee.com/campaign/v3/api) must operate
+    within reasonable volume thresholds. Amobee may request clients to reduce request volume at any time and clients are contractually
+    obligated to comply.
+  source: https://www.amobee.com/trust/master-service-terms/schedule-a/
+- name: Social Publisher API Limits
+  scope: per-publisher
+  enforcement: platform
+  description: Amobee's integrations with social publishers (Facebook/Instagram, Twitter, Pinterest, Snapchat) are subject
+    to those platforms' own API rate limits. Amobee passes these limits through to clients using social inventory buying features.
+  source: https://www.amobee.com/trust/master-service-terms/schedule-c/
+note: No numeric limits are published; rows record contractual/pass-through limits only, so no limit or window is set. Source
+  page answered 403 on 2026-10-20 re-check; limit_text not re-quoted.

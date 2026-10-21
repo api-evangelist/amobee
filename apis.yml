@@ -1,6 +1,11 @@
 aid: amobee
+
 name: Amobee
-description: Amobee (now Nexxen) is a digital advertising platform offering REST APIs for managing cross-channel programmatic campaigns, audience targeting, data management, and advertising analytics. The platform enables advertisers and agencies to plan, activate, and measure media across display, video, mobile, social, and TV channels through a unified DSP.
+
+description: Amobee (now Nexxen) is a digital advertising platform offering REST APIs for managing cross-channel programmatic campaigns, audience
+  targeting, data management, and advertising analytics. The platform enables advertisers and agencies to plan, activate, and measure media across
+  display, video, mobile, social, and TV channels through a unified DSP.
+
 deliveryModel:
   model: saas
   open_source: false
@@ -12,6 +17,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -24,36 +30,114 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amobee.png
+
 url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/apis.yml
-created: "2026-06-13"
-modified: "2026-08-12"
+
+created: '2026-06-13'
+
+modified: '2026-08-12'
+
 specificationVersion: '0.23'
+
 tags:
-  - Digital Advertising
-  - DSP
-  - Programmatic
-  - Campaign Management
-  - Audience Targeting
-  - Data Management Platform
-  - AdTech
-  - Samsung Ads
+- Digital Advertising
+- DSP
+- Programmatic
+- Campaign Management
+- Audience Targeting
+- Data Management Platform
+- AdTech
+- Samsung Ads
+
 tags_raw:
-  - Digital Advertising
-  - DSP
-  - Programmatic
-  - Campaign Management
-  - Audience Targeting
-  - Data Management Platform
-  - Ad Tech
-  - Samsung Ads
+- Digital Advertising
+- DSP
+- Programmatic
+- Campaign Management
+- Audience Targeting
+- Data Management Platform
+- Ad Tech
+- Samsung Ads
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: AgenticAccess
+  url: agentic-access/amobee-agentic-access.yml
+- type: Spectral
+  url: rules/amobee-rules.yml
+- type: JSONLD
+  url: json-ld/amobee-context.jsonld
+- type: Vocabulary
+  url: vocabulary/amobee-vocabulary.yml
+- type: DataModel
+  url: data-model/amobee-data-model.yml
+- type: Deprecation
+  url: lifecycle/amobee-lifecycle.yml
+- type: Hosts
+  url: hosts/amobee-hosts.yml
+- type: IntegrationEdges
+  url: integrations/amobee-integration-edges.yml
+- type: Vendors
+  url: vendors/amobee-vendors.yml
+- type: SDKs
+  url: packages/amobee-packages.yml
+- type: TrustCenter
+  url: https://www.amobee.com/trust/ccpa/
+- type: Blog
+  url: https://www.amobee.com/blog/moving-forward/
+- type: Pricing
+  url: https://www.amobee.com/trust/master-service-terms/schedule-a/
+- type: VulnerabilityDisclosure
+  url: security/amobee-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amobee-domain-security.yml
+- type: Plans
+  url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
+- type: RateLimits
+  url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
+- type: FinOps
+  url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
+- type: TermsOfService
+  url: https://www.amobee.com/trust/master-service-terms/
+- type: PrivacyPolicy
+  url: https://www.amobee.com/trust/privacy-policy/
+- type: Website
+  url: https://www.amobee.com/
+- type: Login
+  url: https://platform.amobee.com/app/account/index.htm
+- type: Security
+  url: security/amobee-vulnerability-disclosure.yml
+- type: WellKnown
+  url: well-known/amobee-well-known.yml
+- type: SecurityTxt
+  url: well-known/amobee-security.txt
+- type: Conventions
+  url: conventions/amobee-conventions.yml
+- type: ErrorCatalog
+  url: errors/amobee-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/amobee-lifecycle.yml
+- type: Conformance
+  url: conformance/amobee-conformance.yml
+- type: Compliance
+  url: conformance/amobee-conformance.yml
+- type: Packages
+  url: packages/amobee-packages.yml
+- type: Overlay
+  url: overlays/amobee-services-overlay.yaml
+- type: GitHubOrganization
+  url: https://github.com/Amobee
+
 apis:
 - aid: amobee:amobee-campaign-api
   name: Amobee Campaign API
-  description: >-
-    REST API for managing cross-channel advertising campaigns including advertisers, insertion orders,
-    line items, packages, creatives, and ads across programmatic channels. Authentication uses OAuth2
-    client credentials flow against the Amobee accounts service.
+  description: REST API for managing cross-channel advertising campaigns including advertisers, insertion orders, line items, packages, creatives,
+    and ads across programmatic channels. Authentication uses OAuth2 client credentials flow against the Amobee accounts service.
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.amobee.com/
   baseURL: https://services.amobee.com/campaign/v3/api
@@ -72,8 +156,6 @@ apis:
   - Creatives
   - Packages
   properties:
-  - type: Authentication
-    url: authentication/amobee-authentication.yml
   - type: Conventions
     url: conventions/amobee-conventions.yml
   - type: ErrorCatalog
@@ -83,19 +165,16 @@ apis:
   - type: Plans
     url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
   - type: RateLimits
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
+    url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
   - type: FinOps
-    url: >-
-      https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
+    url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
   contact:
   - FN: Amobee Support
     url: https://www.amobee.com/
     email: ''
 - aid: amobee:amobee-env-vars-test-controller-api
   name: Amobee Env Vars Test Controller API
-  description: >-
-    The env-vars-test-controller API from Amobee — 1 operation(s) for env-vars-test-controller.
+  description: The env-vars-test-controller API from Amobee — 1 operation(s) for env-vars-test-controller.
   humanURL: https://www.amobee.com/
   baseURL: https://services.amobee.com/campaign/v3/api
   tags:
@@ -109,8 +188,7 @@ apis:
     url: errors/amobee-problem-types.yml
 - aid: amobee:amobee-gateway-swagger-controller-api
   name: Amobee Gateway Swagger Controller API
-  description: >-
-    The gateway-swagger-controller API from Amobee — 2 operation(s) for gateway-swagger-controller.
+  description: The gateway-swagger-controller API from Amobee — 2 operation(s) for gateway-swagger-controller.
   humanURL: https://www.amobee.com/
   baseURL: https://services.amobee.com/campaign/v3/api
   tags:
@@ -122,6 +200,8 @@ apis:
     url: conventions/amobee-conventions.yml
   - type: ErrorCatalog
     url: errors/amobee-problem-types.yml
+  - type: JSONSchema
+    url: json-schema/amobee-swagger-resource-schema.json
 - aid: amobee:amobee-health-check-api
   name: Amobee Health Check API
   description: The health-check API from Amobee — 1 operation(s) for health-check.
@@ -152,10 +232,11 @@ apis:
     url: conventions/amobee-conventions.yml
   - type: ErrorCatalog
     url: errors/amobee-problem-types.yml
+  - type: JSONSchema
+    url: json-schema/amobee-ip-response-schema.json
 - aid: amobee:amobee-tcf-disclosure-controller-api
   name: Amobee Tcf Disclosure Controller API
-  description: >-
-    The tcf-disclosure-controller API from Amobee — 2 operation(s) for tcf-disclosure-controller.
+  description: The tcf-disclosure-controller API from Amobee — 2 operation(s) for tcf-disclosure-controller.
   humanURL: https://www.amobee.com/
   baseURL: https://services.amobee.com/campaign/v3/api
   tags:
@@ -167,79 +248,28 @@ apis:
     url: conventions/amobee-conventions.yml
   - type: ErrorCatalog
     url: errors/amobee-problem-types.yml
-common:
-  - type: Pricing
-    url: https://www.amobee.com/trust/master-service-terms/schedule-a/
-  - type: VulnerabilityDisclosure
-    url: security/amobee-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/amobee-domain-security.yml
-  - type: Plans
-    url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/plans/plans.yml
-  - type: RateLimits
-    url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/rate-limits/rate-limits.yml
-  - type: FinOps
-    url: https://raw.githubusercontent.com/api-evangelist/amobee/refs/heads/main/finops/finops.yml
-  - type: TermsOfService
-    url: https://www.amobee.com/trust/master-service-terms/
-  - type: PrivacyPolicy
-    url: https://www.amobee.com/trust/privacy-policy/
-  - type: Website
-    url: https://www.amobee.com/
-  - type: Login
-    url: https://platform.amobee.com/app/account/index.htm
-  - type: Security
-    url: security/amobee-vulnerability-disclosure.yml
-  - type: WellKnown
-    url: well-known/amobee-well-known.yml
-  - type: SecurityTxt
-    url: well-known/amobee-security.txt
-  - type: Authentication
-    url: authentication/amobee-authentication.yml
-  - type: Conventions
-    url: conventions/amobee-conventions.yml
-  - type: ErrorCatalog
-    url: errors/amobee-problem-types.yml
-  - type: Lifecycle
-    url: lifecycle/amobee-lifecycle.yml
-  - type: Conformance
-    url: conformance/amobee-conformance.yml
-  - type: Compliance
-    url: conformance/amobee-conformance.yml
-  - type: Packages
-    url: packages/amobee-packages.yml
-  - type: Overlay
-    url: overlays/amobee-services-overlay.yaml
-  - type: LLMsTxt
-    url: llms/amobee-llms.txt
-  - type: GitHubOrganization
-    url: https://github.com/Amobee
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+
 x-enrichment:
-  date: '2026-08-12'
+  date: '2026-10-20'
   status: minimal
-  artifacts_added: 12
-  pass: local-v1
+  artifacts_added: 0
+  pass: local-v5
+
 x-coverage:
   state: gated
   reason: customer-only-docs
-  detail: >-
-    Amobee is now operated as Nexxen and its developer surface went with the
-    rebrand — the Platform API reference at services.amobee.com/campaign/v3/doc/
-    returns 404 while the OAuth token endpoint and DSP console still serve existing
-    customers, and the remaining reference lives in a Zendesk help center that
-    refuses anonymous requests (403, Help Center API 401).
+  detail: Amobee is now operated as Nexxen and its developer surface went with the rebrand — the Platform API reference at services.amobee.com/campaign/v3/doc/
+    returns 404 while the OAuth token endpoint and DSP console still serve existing customers, and the remaining reference lives in a Zendesk
+    help center that refuses anonymous requests (403, Help Center API 401).
   evidence:
-    - url: https://services.amobee.com/campaign/v3/doc/
-      status: 404
-    - url: https://help.amobee.com/hc/en-us
-      status: 403
-    - url: https://help.amobee.com/api/v2/help_center/en-us/categories.json
-      status: 401
-    - url: https://services.amobee.com/accounts/v1/api/token
-      status: 405
-    - url: https://services.amobee.com/v3/api-docs
-      status: 200
+  - url: https://services.amobee.com/campaign/v3/doc/
+    status: 404
+  - url: https://help.amobee.com/hc/en-us
+    status: 403
+  - url: https://help.amobee.com/api/v2/help_center/en-us/categories.json
+    status: 401
+  - url: https://services.amobee.com/accounts/v1/api/token
+    status: 405
+  - url: https://services.amobee.com/v3/api-docs
+    status: 200
   checked: '2026-08-12'

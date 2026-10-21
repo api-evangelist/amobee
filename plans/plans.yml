@@ -1,49 +1,53 @@
 generated: '2026-08-12'
 method: searched
 source: https://www.amobee.com/trust/master-service-terms/schedule-a/
+name: Amobee API Plans
 plan_count: 2
 pricing_published: false
-note: >-
-  Amobee publishes no pricing page and no numbers. The two engagement models below
-  are the ones named in Schedule A of the Master Service Terms (Demand Side
-  Platform), which distinguishes managed-service from self-service and defines the
-  fee structure (Cost of Goods Sold, Inventory Cost, DSP Fees comprising a
-  technology fee, a managed service fee and an optional analytics fee, subject to a
-  $0.00005 per-impression minimum) — but every actual rate lives on a per-client
-  Pricing Sheet negotiated with Amobee. Verified 2026-08-12; the terms page now
-  redirects to nexxen.com.
+note: 'Amobee publishes no pricing page and no numbers. The two engagement models below are the ones named in Schedule A of
+  the Master Service Terms (Demand Side Platform), which distinguishes managed-service from self-service and defines the fee
+  structure (Cost of Goods Sold, Inventory Cost, DSP Fees comprising a technology fee, a managed service fee and an optional
+  analytics fee, subject to a $0.00005 per-impression minimum) — but every actual rate lives on a per-client Pricing Sheet
+  negotiated with Amobee. Verified 2026-08-12; the terms page now redirects to nexxen.com. 2026-10-20: the source page answers
+  403 to our fetcher (redirects to nexxen.com), so no price_text/limit_text could be re-quoted verbatim; no prices are published,
+  so none are recorded.'
 plans:
-  - name: Managed Service
-    description: Full-service campaign management where Amobee's team plans, executes, and optimizes campaigns on behalf of the client. Includes access to the Platform API with an API-only account provisioned by Amobee. Pricing is custom based on managed spend, technology fees, and analytics fees as defined in the Master Service Agreement.
-    type: managed
-    rate_limits:
-      - type: requests
-        description: API clients must not unreasonably burden the API with ad call volume and must honor Amobee's requests to limit request volume.
-    features:
-      - Cross-channel campaign management (display, video, mobile, social, TV)
-      - Audience targeting and retargeting
-      - Data Management Platform (DMP) access
-      - Brand Intelligence and analytics
-      - Real-time bid optimization across 2,500+ variables
-      - Location-based targeting
-      - Platform API access (API-only account)
-      - Reporting and analytics
-    contact: https://www.amobee.com/
-
-  - name: Self-Service DSP
-    description: Programmatic self-service access to the Amobee Demand Side Platform. Clients manage their own campaigns via the UI and optionally via Platform API. Technology fees apply as a percentage of media spend. Specific pricing requires direct engagement with Amobee sales.
-    type: self-service
-    rate_limits:
-      - type: requests
-        description: Volume limits apply; clients must not overburden the API and must comply with social publisher API rate limits imposed on Amobee.
-    features:
-      - Programmatic media buying across exchanges
-      - Campaign, insertion order, line item, and creative management
-      - Audience segment targeting
-      - Platform API access
-      - Reporting and analytics
-      - Brand safety controls
-    contact: https://www.amobee.com/
+- name: Managed Service
+  description: Full-service campaign management where Amobee's team plans, executes, and optimizes campaigns on behalf of
+    the client. Includes access to the Platform API with an API-only account provisioned by Amobee. Pricing is custom based
+    on managed spend, technology fees, and analytics fees as defined in the Master Service Agreement.
+  type: managed
+  rate_limits:
+  - type: requests
+    description: API clients must not unreasonably burden the API with ad call volume and must honor Amobee's requests to
+      limit request volume.
+  features:
+  - Cross-channel campaign management (display, video, mobile, social, TV)
+  - Audience targeting and retargeting
+  - Data Management Platform (DMP) access
+  - Brand Intelligence and analytics
+  - Real-time bid optimization across 2,500+ variables
+  - Location-based targeting
+  - Platform API access (API-only account)
+  - Reporting and analytics
+  contact: https://www.amobee.com/
+- name: Self-Service DSP
+  description: Programmatic self-service access to the Amobee Demand Side Platform. Clients manage their own campaigns via
+    the UI and optionally via Platform API. Technology fees apply as a percentage of media spend. Specific pricing requires
+    direct engagement with Amobee sales.
+  type: self-service
+  rate_limits:
+  - type: requests
+    description: Volume limits apply; clients must not overburden the API and must comply with social publisher API rate limits
+      imposed on Amobee.
+  features:
+  - Programmatic media buying across exchanges
+  - Campaign, insertion order, line item, and creative management
+  - Audience segment targeting
+  - Platform API access
+  - Reporting and analytics
+  - Brand safety controls
+  contact: https://www.amobee.com/
 x-canonical:
   generated: '2026-10-08'
   vocabulary: all/0-working/economics/plans-canonical.yml
@@ -62,3 +66,8 @@ x-canonical:
     model_how: derived
     units: []
     periods: []
+audience: business-product
+pricing_basis: negotiated
+published: false
+delivery:
+  delivery: managed

@@ -1,0 +1,102 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 4
+  other_domain: 1
+  platform: 2
+  roles:
+  - api
+  - identity
+  - other
+  - source
+  - website
+hosts:
+- host: amobee-platform.okta.com
+  found_by:
+  - vendor-detect
+  types: []
+  serves:
+  - identity
+  vendor: okta
+  registrable_domain: okta.com
+  role: other
+  relation: other-domain
+- host: api.amobee.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: amobee.com
+  role: api
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: platform.amobee.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: amobee.com
+  role: identity
+  relation: own
+- host: raw.githubusercontent.com
+  found_by:
+  - pointer
+  types:
+  - Plans
+  - RateLimits
+  - FinOps
+  serves: []
+  registrable_domain: githubusercontent.com
+  role: other
+  relation: platform
+- host: services.amobee.com
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: amobee.com
+  role: other
+  relation: own
+- host: www.amobee.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TrustCenter
+  - Blog
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  - Website
+  serves:
+  - docs
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: amobee.com
+  role: website
+  relation: own
