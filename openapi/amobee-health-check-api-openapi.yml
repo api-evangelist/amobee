@@ -246,3 +246,9 @@ components:
         empty:
           type: boolean
     HttpRange: {}
+x-provenance:
+  method: harvested
+  publisher: Amobee
+  source: https://services.amobee.com/v3/api-docs
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
